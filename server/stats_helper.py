@@ -35,11 +35,11 @@ class StatsHelper():
         return result
 
     def totalStaff(self):
-        result = self.database.fetch_all("")
+        result = self.database.fetch_all("SELECT COUNT(employee_name) FROM employeedata")
         return result
 
     def avgEmployeeAge(self):
-        result = self.database.fetch_all("")
+        result = self.database.fetch_all("SELECT FORMAT(SUM(age)/COUNT(employee_name),2) FROM employeedata")
         return result
 
     # HINT: You can define more queries here, along with some python logic to calculate!
