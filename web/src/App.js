@@ -86,6 +86,7 @@ function App() {
         <ChartX/>
       </div>
     </div>
+    
   );
 }
 
