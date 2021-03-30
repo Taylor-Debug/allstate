@@ -27,10 +27,10 @@ export function BasicTable(props) {
           <TableCell component="th" scope="row">
             {row.employee_name}
           </TableCell>
-          <TableCell align="right">{row.exercise_time}</TableCell>
-          <TableCell align="right">{row.sleep_time}</TableCell>
-          <TableCell align="right">{row.social_interaction_time}</TableCell>
-          <TableCell align="right">{row.work_time}</TableCell>
+          <TableCell align="right">{row.totalExerciseTime}</TableCell>
+          <TableCell align="right">{row.totalSleep}</TableCell>
+          <TableCell align="right">{row.totalSocialTime}</TableCell>
+          <TableCell align="right">{row.totalWork}</TableCell>
         </TableRow>)))
   }
 
