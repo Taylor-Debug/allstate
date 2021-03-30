@@ -19,7 +19,7 @@ class StatsHelper():
     #Most Active Month!
 
     def select_all(self):
-        result = self.database.fetch_all("SELECT dayroutine.exercise_time, dayroutine.social_interaction_time, dayroutine.work_time, dayroutine.sleep_time, employeedata.employee_name FROM dayroutine INNER JOIN employeedata on dayroutine.employee_id=employeedata.employee_id")
+        result = self.database.fetch_all("SELECT b.employee_name, SUM(a.exercise_time) AS totalExerciseTime, SUM(a.sleep_time) AS totalSleep, SUM(a.social_interaction_time) AS totalSocialTime, SUM(a.work_time) AS totalWork FROM dayroutine as a join employeedata b on a.employee_id = b.employee_id GROUP BY b.employee_name")
         return result
 
     def join_all(self):

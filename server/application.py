@@ -1,8 +1,9 @@
 from flask import Flask, jsonify
 import time
 from stats_helper import StatsHelper
-import json
+#import json
 from flask_cors import CORS
+import simplejson as json # instead of import json
 
 
 app = Flask(__name__)
@@ -37,3 +38,4 @@ print("### Application started...")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
