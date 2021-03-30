@@ -15,8 +15,9 @@ def home():
     return json.dumps(stats_helper.select_all_employee)
 
 #Used bring in stats
-
-
+@app.route('/Total_Exercise_Hours')
+def exercies_hours_total():
+            
 
 
 @app.route('/')
