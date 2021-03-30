@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+html {
+  color: #1d1d1d;
 }
 
 .App-logo {
@@ -35,4 +35,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navBar {
+  box-sizing: border-box;
+  padding: 30px 60px 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+}
+
+.navBar img {
+  height: 100%;
+}
+
+.navBarLogo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 30px;
+  font-size: 16pt;
+}
+
+.navBarLogo span {
+  margin-top: -5px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.c2a {
+  border-radius: 25px;
+  background: rgb(131, 164, 212);
+  background: linear-gradient(
+    315deg,
+    rgba(131, 164, 212, 1) 0%,
+    rgba(182, 251, 255, 1) 100%
+  );
+  color: #fafafa;
+  font-weight: 600;
+  padding: 10px 40px 10px 40px;
+}
+
+.navLinks a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLinks a:hover {
+  cursor: pointer;
+}
+
+.navLinks a span {
+  margin-top: -2px;
+  padding-left: 5px;
+}
+
+.navLinks a img {
+  height: 16pt;
 }

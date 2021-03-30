@@ -22,39 +22,12 @@ function App() {
     },
   });
   
-  const classes = useStyles();   
-  const [data, setData] = useState([]) 
+  const classes = useStyles();
+  
+  
+  const [data, setData] = useState([])
   const [dataLoad, setDataLoad] = useState(false)
-
-
-  const url = 'http://localhost:5000/' //Used to tell the AccessData method what information to get.
-  //Method call to access the data, to access returned data - use data var
-  var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
-  console.log(emplyeeInfo)
-
-  return (
-    <div className="App">
-    
-    <ButtonAppBar/>
-    <Grid container spacing={1}>
-    <Grid item xs={12} sm={6} className={classes.table}>
-    <BasicTable data={data}/>
-      </Grid>
-        <Grid item xs={12} sm={6}>
-        <Typography variant="h4">
-        Progress Chart
-      </Typography>
-        <Example/>
-        </Grid>
-        </Grid>
-        <CustomizedTimeline/>
-    </div>
-  );
-}
-
-//Getting the data from the URL
-function AccessData(data,setData,dataLoad,setDataLoad,url){
-  //useState = the state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
+    const url = 'http://localhost:5000/'
     useEffect(async () => {
       const result =  await axios({
         url: url,
@@ -70,8 +43,43 @@ function AccessData(data,setData,dataLoad,setDataLoad,url){
       console.log(data)
       setDataLoad(true);
     },[dataLoad]);
-  return data;
-}
 
+
+
+  return (
+    <div className="App">
+
+    <div className="navBar">
+      <div className="navBarLogo">
+        <img src="img/logo.svg" alt="Mental Health App Logo"></img>
+        <span>Mental Health App</span>
+      </div>
+      <div className="navLinks">
+        <a>
+          <img src="img/account.svg"></img>
+          <span>Profile</span>
+        </a>
+        <a className="c2a">
+          <span>Logout</span>
+          <img src="img/logout.svg"></img>
+        </a>
+      </div>
+    </div>
+
+    <Grid container spacing={1}>
+    <Grid item className={classes.table}>
+    <BasicTable data={data}/>
+      </Grid>
+        <Grid item>
+        <Typography variant="h4">
+        Progress Chart
+      </Typography>
+        <Example/>
+        </Grid>
+        </Grid>
+        <CustomizedTimeline/>
+    </div>
+  );
+}
 
 export default App;
