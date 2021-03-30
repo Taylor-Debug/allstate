@@ -224,3 +224,24 @@ th {
   width: 100%;
   text-align: center;
 }
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+#staffcount {
+  transition: --num 5s;
+  counter-set: num var(--num);
+  font-size: 50pt;
+}
+#staffcount::before {
+  content: counter(num);
+}
+#staffcount:hover {
+  --num: 100;
+}
+
+
+

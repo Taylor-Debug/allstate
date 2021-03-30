@@ -70,7 +70,7 @@ function App() {
         <div className="statEntry">
           <h2>Total Amount of Staff</h2>
           <div className="statData">
-            0000
+            <span id="staffcount"></span>
             <span>staff</span>
           </div>
         </div>
