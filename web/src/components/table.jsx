@@ -53,11 +53,34 @@ export function BasicTable(props) {
     <Table className={classes.root} aria-label="simple table">
       <TableHead>
         <TableRow>
-          <TableCell>Employee ID</TableCell>
-          <TableCell align="right">Exercise time</TableCell>
-          <TableCell align="right">Sleep</TableCell>
-          <TableCell align="right">Social</TableCell>
-          <TableCell align="right">work_time</TableCell>
+          <TableCell className="default">Employee Name</TableCell>
+          <TableCell align="right">
+            <div className="thStyle">
+              <img src="img/exercise.svg"></img>
+              <span>Exercise</span>
+            </div>
+            </TableCell>
+          <TableCell align="right">
+            <div className="thStyle">
+              <img src="img/sleep.svg"></img>
+              <span>Sleep</span>
+            </div>  
+          </TableCell>
+          <TableCell align="right">
+            <div className="thStyle">
+              <img src="img/social.svg"></img>
+              <span>Social</span>
+            </div>  
+          </TableCell>
+          <TableCell align="right">
+            <div className="thStyle">
+              <img src="img/work.svg"></img>
+              <span>Work</span>
+            </div>    
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell colspan="5" class="tableHead">Data is displayed in hours.</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>

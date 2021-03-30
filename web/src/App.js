@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BasicTable } from './components/table'
-import { ButtonAppBar } from "./components//navbar"
 import { Example } from "./components//charts"
 import { CustomizedTimeline } from './components/timeline'
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -16,10 +13,10 @@ function App() {
     root: { width: '100%', overflowY: "auto" },
     table: {
       minWidth: 650,
-      height: '500px',
+      height: '100%',
       overflowY: "hidden",
       top: "100px"
-    },
+    }
   });
   
   const classes = useStyles();   
@@ -35,34 +32,34 @@ function App() {
 
   return (
     <div className="App">
+      <div className="navBar">
+        <div className="navBarLogo">
+          <img src="img/logo.svg" alt="Mental Health App Logo"></img>
+          <span>Mental Health App</span>
+        </div>
+        <div className="navLinks">
+          <a>
+            <img src="img/account.svg"></img>
+            <span>Profile</span>
+          </a>
+          <a className="c2a">
+            <span>Logout</span>
+            <img src="img/logout.svg"></img>
+          </a>
+        </div>
+      </div>
+      <div className="employeeTableWrap">
+        <BasicTable data={data}/>
+        <div>
+          <h1 className="chartTitle">Progress chart</h1>
+          <Example/>
+        </div>
+      </div>
 
-    <div className="navBar">
-      <div className="navBarLogo">
-        <img src="img/logo.svg" alt="Mental Health App Logo"></img>
-        <span>Mental Health App</span>
-      </div>
-      <div className="navLinks">
-        <a>
-          <img src="img/account.svg"></img>
-          <span>Profile</span>
-        </a>
-        <a className="c2a">
-          <span>Logout</span>
-          <img src="img/logout.svg"></img>
-        </a>
-      </div>
-    </div>
-    <div className="employeeTableWrap">
-      <BasicTable data={data}/>
-      <Grid item>
-        <Typography variant="h4">
-        Progress Chart
-        </Typography>
-        <Example/>
-        </Grid>
-    </div>
-    
-        <CustomizedTimeline/>
+      <div className="stats">
+        
+      </div> 
+          <CustomizedTimeline/>
     </div>
   );
 }
