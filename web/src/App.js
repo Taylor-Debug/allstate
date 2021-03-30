@@ -50,16 +50,39 @@ function App() {
       </div>
       <div className="employeeTableWrap">
         <BasicTable data={data}/>
-        <div>
-          <h1 className="chartTitle">Progress chart</h1>
-          <Example/>
-        </div>
       </div>
 
       <div className="stats">
-        
+        <div className="statEntry">
+          <h2>Total Exercise Hours</h2>
+          <div className="statData">
+            0000.00
+            <span>hours</span>
+          </div>
+        </div>
+        <div className="statEntry">
+          <h2>Most Active Month</h2>
+          <div className="statData">
+            January
+          </div>
+        </div>
+        <div className="statEntry">
+          <h2>Total Amount of Staff</h2>
+          <div className="statData">
+            0000
+            <span>staff</span>
+          </div>
+        </div>
+        <div className="statEntry">
+          <h2>Average Age of Employees</h2>
+          <div className="statData">
+            00.00
+          </div>
+        </div>
       </div> 
-          <CustomizedTimeline/>
+      <div className="pieChart">
+        <h2 className="textCenter">- - - RESERVED FOR PIE CHART - - -</h2>        
+      </div>
     </div>
   );
 }

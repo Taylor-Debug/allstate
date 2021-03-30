@@ -53,7 +53,12 @@ export function BasicTable(props) {
     <Table className={classes.root} aria-label="simple table">
       <TableHead>
         <TableRow>
-          <TableCell className="default">Employee Name</TableCell>
+          <TableCell className="default">
+            <div className="thStyleL">
+              <img src="img/employee.svg"></img>
+              <span>Employee Name</span>
+            </div>
+          </TableCell>
           <TableCell align="right">
             <div className="thStyle">
               <img src="img/exercise.svg"></img>
