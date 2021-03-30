@@ -13,7 +13,7 @@ function App() {
   // const [data, setData] = useState([{"id": 1, "employee_id": 6298, "month": "January", "exercise_time": 224, "social_interaction_time": 60, "work_time": 2220, "sleep_time": 2100}, {"id": 2, "employee_id": 6299, "month": "January", "exercise_time": 224, "social_interaction_time": 60, "work_time": 2220, "sleep_time": 2100}]);
   
   const useStyles = makeStyles({
-    root: { width: '80%', overflowY: "auto" },
+    root: { width: '100%', overflowY: "auto" },
     table: {
       minWidth: 650,
       height: '500px',
@@ -53,18 +53,14 @@ function App() {
     </div>
     <div className="employeeTableWrap">
       <BasicTable data={data}/>
-    </div>
-    <Grid container spacing={1}>
-    <Grid item className={classes.table}>
-    
-      </Grid>
-        <Grid item>
+      <Grid item>
         <Typography variant="h4">
         Progress Chart
-      </Typography>
+        </Typography>
         <Example/>
         </Grid>
-        </Grid>
+    </div>
+    
         <CustomizedTimeline/>
     </div>
   );
