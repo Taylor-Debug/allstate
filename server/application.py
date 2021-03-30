@@ -1,7 +1,6 @@
 from flask import Flask, jsonify
 import time
 from stats_helper import StatsHelper
-#import json
 from flask_cors import CORS
 import simplejson as json # instead of import json
 
