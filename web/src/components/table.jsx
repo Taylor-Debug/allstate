@@ -85,7 +85,7 @@ export function BasicTable(props) {
           </TableCell>
         </TableRow>
         <TableRow>
-          <TableCell colspan="5" class="tableHead">Data is displayed in hours.</TableCell>
+          <TableCell colspan="5" class="tableHead">Data calculated from the total minutes in a year and is displayed in hours.</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>

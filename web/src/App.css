@@ -211,7 +211,7 @@ th {
 }
 
 .pieChart {
-  width: 80%;
+  height: 60px;
   margin: 60px auto;
   margin-bottom: 60px;
   display: flex;

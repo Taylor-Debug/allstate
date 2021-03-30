@@ -13,11 +13,7 @@ function App() {
   const [dataLoad, setDataLoad] = useState(false)
   var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
 
-  //Getting the data from the URL
-
-
-  //Total Exercise Panel = Passed (data2)
-/*
+  /*
   const [data2, setData2] = useState([])
   const [dataLoad2, setDataLoad2] = useState(false)
   var emplyeeInfo2 = AccessData(data2,setData2,dataLoad2,setDataLoad2,url + "calcExercise")
@@ -65,34 +61,31 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-            0000
+          401,552.00
             <span>hours</span>
           </div>
         </div>
         <div className="statEntry">
           <h2>Most Active Month</h2>
           <div className="statData">
-            January
+          May
           </div>
         </div>
         <div className="statEntry" id="staffCount">
           <h2>Total Amount of Staff</h2>
           <div className="statData">
-            <p className="staffcount"></p>
+            14
             <span>staff</span>
           </div>
         </div>
         <div className="statEntry">
           <h2>Average Age of Employees</h2>
           <div className="statData">
-            00.00
+          44.21
           </div>
         </div>
       </div> 
-      <div className="pieChart">
-        <h2 className="textCenter">Pie Chart</h2>       
-        <ChartX/>
-      </div>
+      <div class="pieChart"></div>
     </div>
     
   );
