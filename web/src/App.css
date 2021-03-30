@@ -231,17 +231,20 @@ th {
   inherits: false;
 }
 
-#staffcount {
+.staffcount {
   transition: --num 5s;
   counter-set: num var(--num);
   font-size: 50pt;
 }
-#staffcount::before {
+
+.staffcount::before {
   content: counter(num);
 }
-#staffcount:hover {
+
+.staffcount:hover {
   --num: 100;
 }
 
-
-
+.statEntry p {
+  margin: 0;
+}

@@ -1,39 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BasicTable } from './components/table'
-import { Example } from "./components//charts"
-import { CustomizedTimeline } from './components/timeline'
 import { ChartX } from './components/piechart'
 import axios from 'axios';
-import { makeStyles } from '@material-ui/core/styles';
 
 function App() {
   // const [data, setData] = useState([{"id": 1, "employee_id": 6298, "month": "January", "exercise_time": 224, "social_interaction_time": 60, "work_time": 2220, "sleep_time": 2100}, {"id": 2, "employee_id": 6299, "month": "January", "exercise_time": 224, "social_interaction_time": 60, "work_time": 2220, "sleep_time": 2100}]);
   
-  const useStyles = makeStyles({
-    root: { width: '100%', overflowY: "auto" },
-    table: {
-      minWidth: 650,
-      height: '100%',
-      overflowY: "hidden",
-      top: "100px"
-    }
-  });
-  
-  const classes = useStyles();   
-
-
   const url = 'http://localhost:5000/' //Used to tell the AccessData method what information to get.
   //Main Table Data Call = Passed (data)
   const [data, setData] = useState([])
   const [dataLoad, setDataLoad] = useState(false)
   var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
-  console.log(emplyeeInfo)
+
+  //Getting the data from the URL
+
+
   //Total Exercise Panel = Passed (data2)
+/*
   const [data2, setData2] = useState([])
   const [dataLoad2, setDataLoad2] = useState(false)
   var emplyeeInfo2 = AccessData(data2,setData2,dataLoad2,setDataLoad2,url + "calcExercise")
-  console.log(emplyeeInfo2)
+
+  
+  /*
   //Most Active Month Panel = Passed (data2)
   const [data3, setData3] = useState([])
   const [dataLoad3, setDataLoad3] = useState(false)
@@ -49,7 +39,7 @@ function App() {
   const [dataLoad5, setDataLoad5] = useState(false)
   var emplyeeInfo5 = AccessData(data5,setData5,dataLoad5,setDataLoad5,url + "avgEmployeeAge")
   console.log(emplyeeInfo5)
-
+*/
   return (
     <div className="App">
       <div className="navBar">
@@ -71,12 +61,11 @@ function App() {
       <div className="employeeTableWrap">
         <BasicTable data={data}/>
       </div>
-
       <div className="stats">
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-            {emplyeeInfo2.totalExerciseTime}
+            0000
             <span>hours</span>
           </div>
         </div>
@@ -86,10 +75,10 @@ function App() {
             January
           </div>
         </div>
-        <div className="statEntry">
+        <div className="statEntry" id="staffCount">
           <h2>Total Amount of Staff</h2>
           <div className="statData">
-            <span id="staffcount"></span>
+            <p className="staffcount"></p>
             <span>staff</span>
           </div>
         </div>
@@ -109,7 +98,6 @@ function App() {
   );
 }
 
-//Getting the data from the URL
 function AccessData(data,setData,dataLoad,setDataLoad,url){
   //useState = the state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
     useEffect(async () => {
@@ -128,6 +116,6 @@ function AccessData(data,setData,dataLoad,setDataLoad,url){
       setDataLoad(true);
     },[dataLoad]);
   return data;
-}
+} 
 
 export default App;

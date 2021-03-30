@@ -1,5 +1,5 @@
 import mysql.connector
-
+import time
 
 class Database:
 

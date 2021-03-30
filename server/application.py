@@ -22,9 +22,9 @@ stats_helper = StatsHelper()
 def homepage():
     return json.dumps(stats_helper.select_all())
 
-@app.route('/employee')
-def employee():
-    return json.dumps(stats_helper.select_all_employee())
+#@app.route('/employee')
+#def employee():
+    #return json.dumps(stats_helper.select_all_employee())
 
 @app.route('/calcExercise')
 def calcExercise():
