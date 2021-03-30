@@ -61,8 +61,8 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-            6,692.53
-            <span>hours</span>
+            <p id="exercisehours"></p>
+            <span class="stat">hours</span>
           </div>
         </div>
         <div className="statEntry">
@@ -74,8 +74,8 @@ function App() {
         <div className="statEntry" id="staffCount">
           <h2>Total Amount of Staff</h2>
           <div className="statData">
-            14
-            <span>staff</span>
+            <p class="staffcount"></p>
+            <span class="stat">staff</span>
           </div>
         </div>
         <div className="statEntry">

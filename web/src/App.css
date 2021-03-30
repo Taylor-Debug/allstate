@@ -201,6 +201,7 @@ th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #1d1d1d;
 }
 
 .statData span {
@@ -227,14 +228,14 @@ th {
 
 @property --num {
   syntax: "<integer>";
-  initial-value: 0;
+  initial-value: 14;
   inherits: false;
 }
 
 .staffcount {
   transition: --num 5s;
   counter-set: num var(--num);
-  font-size: 50pt;
+  font-size: 48pt !important;
 }
 
 .staffcount::before {
@@ -242,9 +243,36 @@ th {
 }
 
 .staffcount:hover {
-  --num: 100;
+  --num: 0;
 }
 
 .statEntry p {
   margin: 0;
+}
+.statEntry:hover {
+  background-color: #eceff1;
+}
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 6693;
+  inherits: false;
+}
+
+#exercisehours {
+  transition: --num1 3s;
+  counter-set: num1 var(--num1);
+  font-size: 48pt;
+}
+#exercisehours::before {
+  content: counter(num1);
+}
+#exercisehours:hover {
+  --num1: 0;
+}
+.stat {
+  font-size: 10px;
+}
+
+.defaultColour {
+  color: #1d1d1d;
 }
