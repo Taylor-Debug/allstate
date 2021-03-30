@@ -248,6 +248,9 @@ th {
 .statEntry p {
   margin: 0;
 }
+.statEntry:hover {
+  background-color: lightgray;
+}
 @property --num1 {
   syntax: "<integer>";
   initial-value: 401552;
