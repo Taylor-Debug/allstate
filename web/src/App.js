@@ -3,6 +3,7 @@ import './App.css';
 import { BasicTable } from './components/table'
 import { Example } from "./components//charts"
 import { CustomizedTimeline } from './components/timeline'
+import { ChartX } from './components/piechart'
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -81,7 +82,8 @@ function App() {
         </div>
       </div> 
       <div className="pieChart">
-        <h2 className="textCenter">- - - RESERVED FOR PIE CHART - - -</h2>        
+        <h2 className="textCenter">Pie Chart</h2>       
+        <ChartX/>
       </div>
     </div>
   );
