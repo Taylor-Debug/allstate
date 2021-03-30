@@ -19,9 +19,8 @@ class StatsHelper():
     #Most Active Month!
 
     def select_all(self):
-        result = self.database.fetch_all("SELECT * FROM dayroutine limit 0,7")
+        result = self.database.fetch_all("SELECT dayroutine.exercise_time, dayroutine.social_interaction_time, dayroutine.work_time, dayroutine.sleep_time, employeedata.employee_name FROM dayroutine INNER JOIN employeedata on dayroutine.employee_id=employeedata.employee_id")
         return result
-
 
     def join_all(self):
         result = self.database.fetch_all("SELECT * FROM dayroutine as a left join employeedata b on a.employee_id = b.employee_id")

@@ -20,9 +20,7 @@ stats_helper = StatsHelper()
    
 @app.route('/')
 def homepage():
-    print("hello world")
     return json.dumps(stats_helper.select_all())
-
 
 @app.route('/employee')
 def employee():
