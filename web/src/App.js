@@ -61,7 +61,7 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-          401,552.00
+          401,552
             <span>hours</span>
           </div>
         </div>
@@ -85,7 +85,7 @@ function App() {
           </div>
         </div>
       </div> 
-      <div class="pieChart"></div>
+      <div className="pieChart"></div>
     </div>
     
   );
