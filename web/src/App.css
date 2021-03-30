@@ -243,5 +243,19 @@ th {
   --num: 100;
 }
 
+/* body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("https://images.pexels.com/photos/783944/pexels-photo-783944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: lighten;
+} */
+
+.statEntry:hover {
+  background-color: lightgray;
+}
+
+.columnheaders:hover {
+  font-weight: bold;
+}
 
 

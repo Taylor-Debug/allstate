@@ -56,31 +56,31 @@ export function BasicTable(props) {
           <TableCell className="default">
             <div className="thStyleL">
               <img src="img/employee.svg"></img>
-              <span>Employee Name</span>
+              <span class="columnheaders">Employee Name</span>
             </div>
           </TableCell>
           <TableCell align="right">
             <div className="thStyle">
               <img src="img/exercise.svg"></img>
-              <span>Exercise</span>
+              <span class="columnheaders">Exercise</span>
             </div>
             </TableCell>
           <TableCell align="right">
             <div className="thStyle">
               <img src="img/sleep.svg"></img>
-              <span>Sleep</span>
+              <span class="columnheaders">Sleep</span>
             </div>  
           </TableCell>
           <TableCell align="right">
             <div className="thStyle">
               <img src="img/social.svg"></img>
-              <span>Social</span>
+              <span class="columnheaders">Social</span>
             </div>  
           </TableCell>
           <TableCell align="right">
             <div className="thStyle">
               <img src="img/work.svg"></img>
-              <span>Work</span>
+              <span class="columnheaders">Work</span>
             </div>    
           </TableCell>
         </TableRow>
