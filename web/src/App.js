@@ -61,7 +61,7 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-          401,552
+            6,692.53
             <span>hours</span>
           </div>
         </div>
