@@ -26,6 +26,22 @@ class StatsHelper():
         result = self.database.fetch_all("SELECT * FROM dayroutine as a left join employeedata b on a.employee_id = b.employee_id")
         return result
 
+    def calculate_total_exercise(self):
+        result = self.database.fetch_all("SELECT FORMAT(SUM(exercise_time),2) as totalExerciseTime FROM dayroutine")
+        return result
+
+    def highest_month(self):
+        result = self.database.fetch_all("SELECT month, SUM(exercise_time) as totalExerciseTime FROM dayroutine GROUP BY month ORDER BY totalExerciseTime LIMIT 0,1")
+        return result
+
+    def totalStaff(self):
+        result = self.database.fetch_all("SELECT COUNT(employee_name) FROM employeedata")
+        return result
+
+    def avgEmployeeAge(self):
+        result = self.database.fetch_all("SELECT FORMAT(SUM(age)/COUNT(employee_name),2) FROM employeedata")
+        return result
+
     # HINT: You can define more queries here, along with some python logic to calculate!
     def calculate_another_stat(self):
       # all_rows = self.database.fetch_all("")

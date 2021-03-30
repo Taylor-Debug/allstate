@@ -26,6 +26,21 @@ def homepage():
 def employee():
     return json.dumps(stats_helper.select_all_employee())
 
+@app.route('/calcExercise')
+def calcExercise():
+    return json.dumps(stats_helper.calculate_total_exercise())
+
+@app.route('/highestMonth')
+def highestMonth():
+    return json.dumps(stats_helper.highest_month())
+
+@app.route('/totalStaff')
+def totalStaff():
+    return json.dumps(stats_helper.totalStaff())
+
+@app.route('/avgEmployeeAge')
+def avgEmployeeAge():
+    return json.dumps(stats_helper.avgEmployeeAge())
 
 @app.route('/alldata')
 def alldata():
