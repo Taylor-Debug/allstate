@@ -34,13 +34,31 @@ function App() {
 
   return (
     <div className="App">
-    
-    <ButtonAppBar/>
+
+    <div className="navBar">
+      <div className="navBarLogo">
+        <img src="img/logo.svg" alt="Mental Health App Logo"></img>
+        <span>Mental Health App</span>
+      </div>
+      <div className="navLinks">
+        <a>
+          <img src="img/account.svg"></img>
+          <span>Profile</span>
+        </a>
+        <a className="c2a">
+          <span>Logout</span>
+          <img src="img/logout.svg"></img>
+        </a>
+      </div>
+    </div>
+    <div className="employeeTableWrap">
+      <BasicTable data={data}/>
+    </div>
     <Grid container spacing={1}>
-    <Grid item xs={12} sm={6} className={classes.table}>
-    <BasicTable data={data}/>
+    <Grid item className={classes.table}>
+    
       </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item>
         <Typography variant="h4">
         Progress Chart
       </Typography>
