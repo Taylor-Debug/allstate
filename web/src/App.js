@@ -76,7 +76,7 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-            0000
+            {emplyeeInfo2.totalExerciseTime}
             <span>hours</span>
           </div>
         </div>

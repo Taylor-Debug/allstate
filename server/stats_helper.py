@@ -27,7 +27,7 @@ class StatsHelper():
         return result
 
     def calculate_total_exercise(self):
-        result = self.database.fetch_all("SELECT FORMAT(SUM(exercise_time),2) FROM dayroutine")
+        result = self.database.fetch_all("SELECT FORMAT(SUM(exercise_time),2) as totalExerciseTime FROM dayroutine")
         return result
 
     def highest_month(self):
