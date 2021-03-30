@@ -30,6 +30,7 @@ function App() {
   const url = 'http://localhost:5000/' //Used to tell the AccessData method what information to get.
   //Method call to access the data, to access returned data - use data var
   var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
+  console.log("Emplyee Info")
   console.log(emplyeeInfo)
 
   return (

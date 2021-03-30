@@ -10,18 +10,17 @@ CORS(app)
 stats_helper = StatsHelper()
 
 #Used to bring in employee table information 
-@app.route('/')
-def home():
-    return json.dumps(stats_helper.select_all_employee)
+# @app.route('/')
+# def home():
+#     return json.dumps(stats_helper.select_all_employee)
 
-#Used bring in stats
-@app.route('/Total_Exercise_Hours')
-def exercies_hours_total():
-            
-
-
+# #Used bring in stats
+# @app.route('/Total_Exercise_Hours')
+# def exercies_hours_total():
+   
 @app.route('/')
 def homepage():
+    print("hello world")
     return json.dumps(stats_helper.select_all())
 
 

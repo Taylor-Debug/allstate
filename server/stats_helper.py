@@ -13,6 +13,7 @@ class StatsHelper():
         return result
 
     #Used for Total Exercise Hours
+    # def select_all_hours(self):
 
 
     #Most Active Month!
