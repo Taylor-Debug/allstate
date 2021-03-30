@@ -22,29 +22,15 @@ function App() {
     },
   });
   
-  const classes = useStyles();
-  
-  
-  const [data, setData] = useState([])
+  const classes = useStyles();   
+  const [data, setData] = useState([]) 
   const [dataLoad, setDataLoad] = useState(false)
-    const url = 'http://localhost:5000/'
-    useEffect(async () => {
-      const result =  await axios({
-        url: url,
-        method: 'GET',
-        headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-        },
-        responseType: 'json',
-        })
-   
-      setData(result.data)
-      console.log(data)
-      setDataLoad(true);
-    },[dataLoad]);
 
 
+  const url = 'http://localhost:5000/' //Used to tell the AccessData method what information to get.
+  //Method call to access the data, to access returned data - use data var
+  var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
+  console.log(emplyeeInfo)
 
   return (
     <div className="App">
@@ -65,5 +51,27 @@ function App() {
     </div>
   );
 }
+
+//Getting the data from the URL
+function AccessData(data,setData,dataLoad,setDataLoad,url){
+  //useState = the state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
+    useEffect(async () => {
+      const result =  await axios({
+        url: url,
+        method: 'GET',
+        headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+        },
+        responseType: 'json',
+        })
+   
+      setData(result.data)
+      console.log(data)
+      setDataLoad(true);
+    },[dataLoad]);
+  return data;
+}
+
 
 export default App;
