@@ -36,7 +36,6 @@ CREATE TABLE `employeedata` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 LOCK TABLES `employeedata` WRITE;
 /*!40000 ALTER TABLE `employeedata` DISABLE KEYS */;
 INSERT INTO `employeedata` (`id`, `employee_id`, `employee_name`, `age`, `gender`, `occupation`) VALUES

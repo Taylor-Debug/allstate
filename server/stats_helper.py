@@ -7,9 +7,15 @@ class StatsHelper():
         self.database = Database()
         print("Stats Helping initialising!")
 
+    #Used for content table
     def select_all_employee(self):
         result = self.database.fetch_all("SELECT * FROM employeedata")
         return result
+
+    #Used for Total Exercise Hours
+
+
+    #Most Active Month!
 
     def select_all(self):
         result = self.database.fetch_all("SELECT * FROM dayroutine limit 0,7")

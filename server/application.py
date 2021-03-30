@@ -9,6 +9,16 @@ app = Flask(__name__)
 CORS(app)
 stats_helper = StatsHelper()
 
+#Used to bring in employee table information 
+@app.route('/')
+def home():
+    return json.dumps(stats_helper.select_all_employee)
+
+#Used bring in stats
+
+
+
+
 @app.route('/')
 def homepage():
     return json.dumps(stats_helper.select_all())

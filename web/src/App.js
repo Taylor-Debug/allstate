@@ -73,5 +73,4 @@ function AccessData(data,setData,dataLoad,setDataLoad,url){
   return data;
 }
 
-
 export default App;
