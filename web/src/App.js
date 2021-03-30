@@ -21,15 +21,34 @@ function App() {
   });
   
   const classes = useStyles();   
-  const [data, setData] = useState([]) 
-  const [dataLoad, setDataLoad] = useState(false)
 
 
   const url = 'http://localhost:5000/' //Used to tell the AccessData method what information to get.
-  //Method call to access the data, to access returned data - use data var
+  //Main Table Data Call = Passed (data)
+  const [data, setData] = useState([])
+  const [dataLoad, setDataLoad] = useState(false)
   var emplyeeInfo = AccessData(data,setData,dataLoad,setDataLoad,url)
-  console.log("Emplyee Info")
   console.log(emplyeeInfo)
+  //Total Exercise Panel = Passed (data2)
+  const [data2, setData2] = useState([])
+  const [dataLoad2, setDataLoad2] = useState(false)
+  var emplyeeInfo2 = AccessData(data2,setData2,dataLoad2,setDataLoad2,url + "calcExercise")
+  console.log(emplyeeInfo2)
+  //Most Active Month Panel = Passed (data2)
+  const [data3, setData3] = useState([])
+  const [dataLoad3, setDataLoad3] = useState(false)
+  var emplyeeInfo3 = AccessData(data3,setData3,dataLoad3,setDataLoad3,url + "highestMonth")
+  console.log(emplyeeInfo3)
+  //Total Amount of staff Panel = Passed (data2)
+  const [data4, setData4] = useState([])
+  const [dataLoad4, setDataLoad4] = useState(false)
+  var emplyeeInfo4 = AccessData(data4,setData4,dataLoad4,setDataLoad4,url + "totalStaff")
+  console.log(emplyeeInfo4)
+  //Most Active Month Panel = Passed (data2)
+  const [data5, setData5] = useState([])
+  const [dataLoad5, setDataLoad5] = useState(false)
+  var emplyeeInfo5 = AccessData(data5,setData5,dataLoad5,setDataLoad5,url + "avgEmployeeAge")
+  console.log(emplyeeInfo5)
 
   return (
     <div className="App">
@@ -57,7 +76,7 @@ function App() {
         <div className="statEntry">
           <h2>Total Exercise Hours</h2>
           <div className="statData">
-            0000.00
+            0000
             <span>hours</span>
           </div>
         </div>
