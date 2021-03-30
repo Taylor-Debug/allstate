@@ -15,7 +15,6 @@ function App() {
   const useStyles = makeStyles({
     root: { width: '80%', overflowY: "auto" },
     table: {
-      minWidth: 650,
       height: '500px',
       overflowY: "hidden",
       top: "100px"
@@ -65,10 +64,12 @@ function App() {
         </a>
       </div>
     </div>
-
+    <div className="employeeTableWrap">
+      <BasicTable data={data}/>
+    </div>
     <Grid container spacing={1}>
     <Grid item className={classes.table}>
-    <BasicTable data={data}/>
+    
       </Grid>
         <Grid item>
         <Typography variant="h4">
