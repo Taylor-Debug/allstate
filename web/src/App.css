@@ -227,12 +227,12 @@ th {
 
 @property --num {
   syntax: "<integer>";
-  initial-value: 0;
+  initial-value: 14;
   inherits: false;
 }
 
 #staffcount {
-  transition: --num 5s;
+  transition: --num 1s;
   counter-set: num var(--num);
   font-size: 50pt;
 }
@@ -240,15 +240,8 @@ th {
   content: counter(num);
 }
 #staffcount:hover {
-  --num: 100;
+  --num: 0;
 }
-
-/* body {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("https://images.pexels.com/photos/783944/pexels-photo-783944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-blend-mode: lighten;
-} */
 
 .statEntry:hover {
   background-color: lightgray;
